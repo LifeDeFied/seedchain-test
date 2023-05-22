@@ -1,0 +1,12 @@
+syntax = "proto3";
+package seedchain.seedchain;
+
+import "gogoproto/gogo.proto";
+import "seedchain/seedchain/params.proto";
+
+option go_package = "seedchain/x/seedchain/types";
+
+// GenesisState defines the seedchain module's genesis state.
+message GenesisState {
+  Params params = 1 [(gogoproto.nullable) = false];
+}
